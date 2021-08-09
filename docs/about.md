@@ -5,11 +5,6 @@ nav_order: 4
 
 ---
 
-
-# Contributors:
-
-
-
 # Principle Investigator:
 * Jake Y. Chen, Ph.D.
 
