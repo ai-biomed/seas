@@ -18,9 +18,6 @@ nav_order: 5
 
 ---
 
-
-
-
 ## SEAS purpose
 
 Statistical Enrichment Analysis of Samples (SEAS) is a tool to find which clinical (metadata) attributes are enriched within a sample subset. For example, SEAS answer the following questions:
@@ -29,13 +26,13 @@ SEAS can be used to infer or annotate the unknown clinical (metadata) attribute 
 * I same a brain cancer patient whom I do not know the survival time; can I use SEAS to infer the survival time of the patient?
 To do so, I can define a subcohort, which includes the most similar patients to the unknown survival-time patient. The question is converted to the one above, which can be answered by SEAS. Also, in SEAS, I can use embedding to view similar patients.
 
-
+---
 
 ## SEAS session workflow
 
 ![Figure 1](https://aimed-uab.github.io/SEAS/docs/overview/figure1.jpg)
 
-As showed in Figure 1, a SEAS session (https://aimed-lab.shinyapps.io/SEAS/) includes three steps:
+As showed in Figure 1, a SEAS session [https://aimed-lab.shinyapps.io/SEAS/](https://aimed-lab.shinyapps.io/SEAS/) includes three steps:
 - Uploading data: the user upload the clinical metadata for each sample (required) and/or the embedding for these samples (optional)
 The purpose of embedding is to visualize the similarity among the samples. Each sample is represented by a 2D point. The closer the two points are, the more similar the two samples are.
 - Selecting cohort: the user can manually select an interested subcohort or use the embedding to select a subcohort where the samples are similar to each other.
@@ -44,6 +41,8 @@ The purpose of embedding is to visualize the similarity among the samples. Each 
 The functional workflow is as follow:
 
 ![SEAS Workflow](https://aimed-uab.github.io/SEAS/docs/overview/SEAS_workflow.png)
+
+---
 
 ## Input and output format
 
@@ -55,7 +54,9 @@ The input files for SEAS are in table text format. The table column can be separ
 
 - The embedding table only has three columns: the sample identifier, the embedding x-coordinate of these samples, and the embedding y-coordinate of these samples. An example of the clinical table format is as follow:
 
-![Input Format Patient Embedding Data](https://aimed-uab.github.io/SEAS/docs/overview/inputss2.png)
+![Input Format Patient Embedding Data](https://aimed-uab.github.io/SEAS/docs/overview/inputss2.jpg)
+
+---
 
 ## Navigating through SEAS
 
@@ -87,6 +88,8 @@ SEAS presents the enrichment result in a table, typically as follow:
 - '# in the selected cohort': the number of samples that have the clinical outcome defined by the previous two columns in the selected subcohort
 - p-value: the result of statistical test for clinical enrichment. The smaller p-value is, the more likely the clinical outcome is prevalent in the selected subcohort.
 
+---
+
 ## Current technical limitation
 
 * The current SEAS version is deployed in an online machine where the memory allocation is only 2GB. Therefore, we recommend that the input file size should be less than 100 MB. This input size usually has less than 10000 samples.
@@ -95,9 +98,11 @@ SEAS presents the enrichment result in a table, typically as follow:
 * System slow computation and response. That is, the user interacts and expects some visualization (i.e. embedding plot) while the system has not yet computed and processed.
 To completely solve these issues, we may upgrade the SEAS server. This requires a monthly payment to shinyapps.io. Due to the financial processing time requirement, we have not yet completed the paperwork for the upgrade. Meanwhile, the user may try deploying SEAS code at shinyapps.io inside an in-house computer.
 
+---
+
 ## How to contribute to SEAS
 
 We welcome the user’s feedback and contributed dataset for future SEAS development. Please email SEAS developer the issues and sample dataset at:
-- jakechen@uab.edu (Jake Chen, supervisor)
-- thamnguy@uab.edu (Thanh Nguyen, the architect)
-- sbharti@uab.edu (Samuel Bharti, the programmer).
+- [jakechen@uab.edu](mailto:jakechen@uab.edu) (Jake Chen, supervisor)
+- [thamnguy@uab.edu](mailto:thamnguy@uab.edu) (Thanh Nguyen, the architect)
+- [sbharti@uab.edu](mailto:sbharti@uab.edu) (Samuel Bharti, the programmer).
