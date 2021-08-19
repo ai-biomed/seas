@@ -16,7 +16,6 @@ nav_order: 5
 {:toc}
 </details>
 
----
 
 ## SEAS purpose
 
@@ -27,7 +26,6 @@ SEAS can be used to infer or annotate the unknown clinical (metadata) attribute 
 To do so, I can define a subcohort, which includes the most similar patients to the unknown survival-time patient. The question is converted to the one above, which can be answered by SEAS. Also, in SEAS, I can use embedding to view similar patients.
 
 
----
 
 ## SEAS session workflow
 
