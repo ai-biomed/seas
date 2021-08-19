@@ -31,20 +31,12 @@ To do so, I can define a subcohort, which includes the most similar patients to 
 
 ## SEAS session workflow
 
-To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
+<!-- To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
 
 #### Example
-{: .no_toc }
+{: .no_toc } -->
 
-```yaml
----
-layout: default
-title: Customization
-nav_order: 4
----
-```
-
-The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
+<!-- The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
 
 The parameter values can be numbers (integers, floats) and/or strings. When you omit `nav_order` parameters, they default to the titles of the pages, which are ordered alphabetically. Pages with numerical `nav_order` parameters always come before those with strings or default `nav_order` parameters. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages.
 
@@ -52,11 +44,11 @@ By default, all Capital letters come before all lowercase letters; you can add `
 
 > *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
 
----
+--- -->
 
 ## Input and output format
 
-For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
+<!-- For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
 #### Example
 {: .no_toc }
@@ -73,11 +65,11 @@ The `nav_exclude` parameter does not affect the [auto-generating list of child p
 
 Pages with no `title` are automatically excluded from the navigation. 
 
----
+--- -->
 
 ## Navigating through SEAS
 
-Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
+<!-- Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
 
 ```
 +-- ..
@@ -206,7 +198,7 @@ This would create the following navigation structure:
 +-- ..
 ```
 
----
+--- -->
 
 ## Current technical limitation
 
