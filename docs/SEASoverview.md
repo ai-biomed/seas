@@ -33,9 +33,59 @@ To do so, I can define a subcohort, which includes the most similar patients to 
 
 ## SEAS session workflow
 
+![Figure 1](https://aimed-uab.github.io/SEAS/docs/overview/figure1.jpg)
+
+As showed in Figure 1, a SEAS session (https://aimed-lab.shinyapps.io/SEAS/) includes three steps:
+- Uploading data: the user upload the clinical metadata for each sample (required) and/or the embedding for these samples (optional)
+The purpose of embedding is to visualize the similarity among the samples. Each sample is represented by a 2D point. The closer the two points are, the more similar the two samples are.
+- Selecting cohort: the user can manually select an interested subcohort or use the embedding to select a subcohort where the samples are similar to each other.
+- Analyze: the result shows which clinical attributes are enriched (dominant) in the selected subcohort. For each attribute, its the p-value tells, statistically, how likely the attribute are enriched. By default, if the p-value is less than 0.05, the attribute is considered significantly enriched.
+
+The functional workflow is as follow:
+
+![SEAS Workflow](https://aimed-uab.github.io/SEAS/docs/overview/SEAS_workflow.png)
+
 ## Input and output format
 
+The input files for SEAS are in table text format. The table column can be separated by ‘tab’ or ‘comma’. ‘Tab’ is more preferred. Excel is recommended to prepare the input text file.
+
+- The clinical table first column should be the sample identifier (i.e. patient ID). An example of the clinical table format is as follow:
+
+![Input Format Clinical data](https://aimed-uab.github.io/SEAS/docs/overview/inputss1.png)
+
+- The embedding table only has three columns: the sample identifier, the embedding x-coordinate of these samples, and the embedding y-coordinate of these samples. An example of the clinical table format is as follow:
+
+![Input Format Patient Embedding Data](https://aimed-uab.github.io/SEAS/docs/overview/inputss2.png)
+
 ## Navigating through SEAS
+
+### 1.	Embedding
+
+Embedding is a key element for SEAS to have good results. The user may choose either tSNE or umap algorithm to embed the sample if the user does not prepare the embedding input file. Still, we encourage the user to prepare and examine the embedding before analyzing using SEAS carefully.
+
+### 2.	Exploring data (optional)
+
+SEAS allows users to visualize the clinical feature relations through grouped bar plots and scatter plots. upon uploading the dataset
+SEAS automatically identifies the data type of each clinotype in the dataset and places them in respective suitable plots. 
+Linear Model Prediction is also added inside the scatter plot to visualize the correlation between two clinotypes.
+
+### 3.	Subcohort selection
+
+SEAS support the following ways to select the subcohort:
+- Box selection: the user draw a bounding box that covers some samples in the embedding visualization. SEAS would recognize the samples inside the box as the subcohort.
+- Neighbor-point selection: in the embedding visualization, the user chooses a sample as the center and a radius. This defines a circle. SEAS would recognize all sample points inside the circle as the subcohort.
+- Entering sample selection: the user can enter the list of sample identifiers into a box to define a subcohort.
+
+### 4.	Understanding the result
+
+SEAS presents the enrichment result in a table, typically as follow:
+
+![Understanding Results](https://aimed-uab.github.io/SEAS/docs/overview/understandingResults.png)
+
+- The first column is the feature name. The second feature is the value. For example, the figure about shows ‘Discrete_days_to_death > 300‘ (outcome: the patient survive for more than 300 days)
+- '# in the population': the number of samples that have clinical outcomes defined by the previous two columns in the whole population.
+- '# in the selected cohort': the number of samples that have the clinical outcome defined by the previous two columns in the selected subcohort
+- p-value: the result of statistical test for clinical enrichment. The smaller p-value is, the more likely the clinical outcome is prevalent in the selected subcohort.
 
 ## Current technical limitation
 
@@ -48,6 +98,6 @@ To completely solve these issues, we may upgrade the SEAS server. This requires 
 ## How to contribute to SEAS
 
 We welcome the user’s feedback and contributed dataset for future SEAS development. Please email SEAS developer the issues and sample dataset at:
-jakechen@uab.edu (Jake Chen, supervisor)
-thamnguy@uab.edu (Thanh Nguyen, the architect)
-sbharti@uab.edu (Samuel Bharti, the programmer).
+- jakechen@uab.edu (Jake Chen, supervisor)
+- thamnguy@uab.edu (Thanh Nguyen, the architect)
+- sbharti@uab.edu (Samuel Bharti, the programmer).
