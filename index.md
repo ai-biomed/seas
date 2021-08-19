@@ -11,7 +11,7 @@ permalink: /
 
 {: .fs-6 .fw-300 }
 
-[Launch SEAS](https://aimed-lab.shinyapps.io/SEAS/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Download SEAS](https://github.com/aimed-uab/SEAS){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Launch](https://aimed-lab.shinyapps.io/SEAS/){:target="_blank"}{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Download](https://github.com/aimed-uab/SEAS){:target="_blank"}{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -26,4 +26,4 @@ In this work, we defined and provided the initial solution for the Statistical E
 ---
 
 ## Result: 
-We implemented the SEAS in an online prototype at [https://aimed-lab.shinyapps.io/SEAS/](https://aimed-lab.shinyapps.io/SEAS/) and showed that SEAS tackled two problems in The Cancer Genome Atlas’ GBM clinical case-study. First, enriched clinical features appearing in the demo cohort showed that SEAS could detect potential ‘bias’ in the selected cohort if the researcher were not aware. Second, when analyzing two different cohorts with different chemotherapy clinical improvement outcomes, SEAS detected no enriched feature, suggesting that the researcher could safely select these two cohorts to further study genetic factors that affect chemotherapy outcome in GBM.
+We implemented the SEAS in an online prototype at [https://aimed-lab.shinyapps.io/SEAS/](https://aimed-lab.shinyapps.io/SEAS/){:target="_blank"} and showed that SEAS tackled two problems in The Cancer Genome Atlas’ GBM clinical case-study. First, enriched clinical features appearing in the demo cohort showed that SEAS could detect potential ‘bias’ in the selected cohort if the researcher were not aware. Second, when analyzing two different cohorts with different chemotherapy clinical improvement outcomes, SEAS detected no enriched feature, suggesting that the researcher could safely select these two cohorts to further study genetic factors that affect chemotherapy outcome in GBM.

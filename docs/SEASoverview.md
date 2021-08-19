@@ -33,7 +33,7 @@ To do so, I can define a subcohort, which includes the most similar patients to 
 
 ![Figure 1](https://aimed-uab.github.io/SEAS/docs/overview/figure1.jpg)
 
-As showed in Figure 1, a SEAS session [https://aimed-lab.shinyapps.io/SEAS/](https://aimed-lab.shinyapps.io/SEAS/) includes three steps:
+As showed in Figure 1, a SEAS session [https://aimed-lab.shinyapps.io/SEAS/](https://aimed-lab.shinyapps.io/SEAS/){:target="_blank"} includes three steps:
 - Uploading data: the user upload the clinical metadata for each sample (required) and/or the embedding for these samples (optional)
 The purpose of embedding is to visualize the similarity among the samples. Each sample is represented by a 2D point. The closer the two points are, the more similar the two samples are.
 - Selecting cohort: the user can manually select an interested subcohort or use the embedding to select a subcohort where the samples are similar to each other.
@@ -61,24 +61,24 @@ The input files for SEAS are in table text format. The table column can be separ
 
 ## Navigating through SEAS
 
-### 1.	Embedding
+### Embedding
 
 Embedding is a key element for SEAS to have good results. The user may choose either tSNE or umap algorithm to embed the sample if the user does not prepare the embedding input file. Still, we encourage the user to prepare and examine the embedding before analyzing using SEAS carefully.
 
-### 2.	Exploring data (optional)
+### Exploring data (optional)
 
 SEAS allows users to visualize the clinical feature relations through grouped bar plots and scatter plots. upon uploading the dataset
 SEAS automatically identifies the data type of each clinotype in the dataset and places them in respective suitable plots. 
 Linear Model Prediction is also added inside the scatter plot to visualize the correlation between two clinotypes.
 
-### 3.	Subcohort selection
+### Subcohort selection
 
 SEAS support the following ways to select the subcohort:
 - Box selection: the user draw a bounding box that covers some samples in the embedding visualization. SEAS would recognize the samples inside the box as the subcohort.
 - Neighbor-point selection: in the embedding visualization, the user chooses a sample as the center and a radius. This defines a circle. SEAS would recognize all sample points inside the circle as the subcohort.
 - Entering sample selection: the user can enter the list of sample identifiers into a box to define a subcohort.
 
-### 4.	Understanding the result
+### Understanding the result
 
 SEAS presents the enrichment result in a table, typically as follow:
 
