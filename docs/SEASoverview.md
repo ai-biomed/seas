@@ -1,9 +1,10 @@
 ---
 layout: default
-title: SEAS Overview
-nav_order: 5
+title: Overview
+nav_order: 2
 
 ---
+
 # SEAS Overview
 {: .no_toc }
 
