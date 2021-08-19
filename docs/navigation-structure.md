@@ -1,11 +1,10 @@
 ---
 layout: default
-title: SEAS Overview
+title: Navigation Structure
 nav_order: 5
-
 ---
 
-# SEAS Overview
+# Navigation Structure
 {: .no_toc }
 
 <details open markdown="block">
@@ -17,25 +16,32 @@ nav_order: 5
 {:toc}
 </details>
 
+---
 
-## SEAS purpose
+## Main navigation
 
-Statistical Enrichment Analysis of Samples (SEAS) is a tool to find which clinical (metadata) attributes are enriched within a sample subset. For example, SEAS answer the following questions:
-* I have population data with brain cancer survival time; I select an interested patient subcohort, such as who received X treatment; does this subcohort have long survival time?
-SEAS can be used to infer or annotate the unknown clinical (metadata) attribute of a sample. For example:
-* I same a brain cancer patient whom I do not know the survival time; can I use SEAS to infer the survival time of the patient?
-To do so, I can define a subcohort, which includes the most similar patients to the unknown survival-time patient. The question is converted to the one above, which can be answered by SEAS. Also, in SEAS, I can use embedding to view similar patients.
+The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
 
+By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
 
+---
 
-## SEAS session workflow
+## Ordering pages
 
-<!-- To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
+To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
 
 #### Example
-{: .no_toc } -->
+{: .no_toc }
 
-<!-- The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
+```yaml
+---
+layout: default
+title: Customization
+nav_order: 4
+---
+```
+
+The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
 
 The parameter values can be numbers (integers, floats) and/or strings. When you omit `nav_order` parameters, they default to the titles of the pages, which are ordered alphabetically. Pages with numerical `nav_order` parameters always come before those with strings or default `nav_order` parameters. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages.
 
@@ -43,11 +49,11 @@ By default, all Capital letters come before all lowercase letters; you can add `
 
 > *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
 
---- -->
+---
 
-## Input and output format
+## Excluding pages
 
-<!-- For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
+For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
 #### Example
 {: .no_toc }
@@ -64,11 +70,11 @@ The `nav_exclude` parameter does not affect the [auto-generating list of child p
 
 Pages with no `title` are automatically excluded from the navigation. 
 
---- -->
+---
 
-## Navigating through SEAS
+## Pages with children
 
-<!-- Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
+Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
 
 ```
 +-- ..
@@ -197,18 +203,11 @@ This would create the following navigation structure:
 +-- ..
 ```
 
---- -->
+---
 
-## Current technical limitation
+## Auxiliary Links
 
-* The current SEAS version is deployed in an online machine where the memory allocation is only 2GB. Therefore, we recommend that the input file size should be less than 100 MB. This input size usually has less than 10000 samples.
-* The user may see the error, which says, ‘An error has occurred. Check your logs or contact the app author for clarification’. We have investigated these issues and found that the issues are not related to our implementation. Two reasons for these issues are:
-* Long time without interaction. Usually, the SEAS online tool would return an error if the user does not interact with SEAS within 3-5 minutes
-* System slow computation and response. That is, the user interacts and expects some visualization (i.e. embedding plot) while the system has not yet computed and processed.
-To completely solve these issues, we may upgrade the SEAS server. This requires a monthly payment to shinyapps.io. Due to the financial processing time requirement, we have not yet completed the paperwork for the upgrade. Meanwhile, the user may try deploying SEAS code at shinyapps.io inside an in-house computer.
-
-
-<!-- To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
 #### Example
 {: .no_toc }
@@ -220,19 +219,13 @@ aux_links:
     - "//github.com/pmarsceill/just-the-docs"
 ```
 
---- -->
+---
 
-## How to contribute to SEAS
+## In-page navigation with Table of Contents
 
-We welcome the user’s feedback and contributed dataset for future SEAS development. Please email SEAS developer the issues and sample dataset at:
-jakechen@uab.edu (Jake Chen, supervisor)
-thamnguy@uab.edu (Thanh Nguyen, the architect)
-sbharti@uab.edu (Samuel Bharti, the programmer).
+To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
 
-
-<!-- To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class. -->
-
-<!-- #### Example
+#### Example
 {: .no_toc }
 
 ```markdown
@@ -264,4 +257,3 @@ The Table of Contents can be made collapsible using the `<details>` and `<summar
 ```
 
 The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).
- -->
