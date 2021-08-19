@@ -6,7 +6,7 @@ nav_order: 5
 ---
 
 # SEAS Overview
-{: .no_toc }
+<!-- {: .no_toc }
 
 <details open markdown="block">
   <summary>
@@ -15,7 +15,7 @@ nav_order: 5
   {: .text-delta }
 1. TOC
 {:toc}
-</details>
+</details> -->
 
 
 ## SEAS purpose
