@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SEAS Tutorial
+title:  Tutorial
 nav_order: 3
 
 ---

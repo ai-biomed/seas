@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Session Workflow
-parent: SEAS Overview
+parent: Overview
 nav_order: 2
 
 ---

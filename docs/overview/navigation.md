@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Navigating through SEAS
-parent: SEAS Overview
+parent: Overview
 nav_order: 4
 
 ---

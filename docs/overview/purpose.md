@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Purpose
-parent: SEAS Overview
+parent: Overview
 nav_order: 1
 
 ---

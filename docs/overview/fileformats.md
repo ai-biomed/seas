@@ -1,7 +1,7 @@
 ---
 layout: default
 title: File Formats
-parent: SEAS Overview
+parent: Overview
 nav_order: 3
 
 ---

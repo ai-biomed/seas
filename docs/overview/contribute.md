@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contribute
-parent: SEAS Overview
+parent: Overview
 nav_order: 6
 
 ---

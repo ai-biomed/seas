@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Limitations
-parent: SEAS Overview
+parent: Overview
 nav_order: 5
 
 ---

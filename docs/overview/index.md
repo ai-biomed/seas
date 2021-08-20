@@ -1,9 +1,9 @@
 ---
 layout: default
-title: SEAS Overview
+title:  Overview
 nav_order: 2
 has_children: true
 
 ---
 
-# Here Overview will be posted.
+# SEAS Overview
