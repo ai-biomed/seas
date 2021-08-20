@@ -10,6 +10,7 @@ This branch hosts SEAS documentation website. Visit [here](https://aimed-uab.git
 
 
 Design and development : [@samuelbharti](https://github.com/SamuelBharti)
+
 Theme Adopted : [just-the-docs](https://github.com/pmarsceill/just-the-docs)
 
 
