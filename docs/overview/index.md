@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SEAS Overview
-nav_order: 5
+nav_order: 2
 has_children: true
 
 ---

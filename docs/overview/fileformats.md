@@ -12,8 +12,8 @@ The input files for SEAS are in table text format. The table column can be separ
 
 - The clinical table first column should be the sample identifier (i.e. patient ID). An example of the clinical table format is as follow:
 
-![Input Format Clinical data](https://aimed-uab.github.io/SEAS/docs/overview/inputss1.png)
+![Input Format Clinical data](https://aimed-uab.github.io/SEAS/docs/images/inputss1.png)
 
 - The embedding table only has three columns: the sample identifier, the embedding x-coordinate of these samples, and the embedding y-coordinate of these samples. An example of the clinical table format is as follow:
 
-![Input Format Patient Embedding Data](https://aimed-uab.github.io/SEAS/docs/overview/inputss2.jpg)
+![Input Format Patient Embedding Data](https://aimed-uab.github.io/SEAS/docs/images/inputss2.jpg)
