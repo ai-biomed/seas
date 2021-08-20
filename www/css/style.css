@@ -1,9 +1,41 @@
 .ralign {
   float: right;
 }
-
-.main-header .logo {
-  font-family: "Georgia", Times, "Times New Roman", serif;
-  font-weight: bold;
-  font-size: 24px;
+.mainSections {
+  height: 85vh;
+  margin-bottom: 2vh;
+  padding: 1vw;
+  font-size: 18px;
 }
+.irs-bar,
+.irs-bar-edge,
+.irs-single,
+.irs-grid-pol{
+  background: #48639C ;
+  border-color: #48639C ;
+}
+
+.checkbox input{
+  background-color: #48639C ;
+}
+
+.brand-text {
+  margin-left:85px  !important; 
+
+}
+
+.brand-link {
+  font-size: 125% !important;
+  
+}
+
+.infoBadge {
+  font-size:120% !important;
+  
+}
+
+.infobtn2 {
+  border-radius: 50% !important;
+  padding: 0 !important;
+}
+

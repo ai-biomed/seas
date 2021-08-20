@@ -1,19 +1,22 @@
 library(bs4Dash)
 library(shiny)
-#library(shinydashboard)
-library(ggplot2)
-library(Cairo) 
-library(hrbrthemes)
-#library(dashboardthemes)
-#library(shiny.semantic)
-#library(semantic.dashboard)
+library(shinyWidgets)
+library(fresh)
 library(plotly)
 library(DT)
+library(htmltools)
+library(markdown)
+library(dplyr)
+library(Hmisc)
+library(tidyverse)
+library(knitr)
+library(shinybusy)
+library(Rtsne)
+library(umap)
 
-library(scatterD3)
+rmdfiles <- c("userInterface/contact.Rmd","userInterface/documentation.Rmd")
+sapply(rmdfiles, knit, quiet = T)
 
-mtcars
-
-source("enrichByHyp.R",local = TRUE)$value
-source("enrichByRes.R",local = TRUE)$value
-source("selectByCluster.R",local = TRUE)$value
+# Demo File paths
+embeddingFilePath <- "www/demoData/Embedding.csv"
+clinicalFilePath <- "www/demoData/Clinical.csv"
