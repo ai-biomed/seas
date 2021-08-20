@@ -19,6 +19,11 @@ nav_order: 3
 
 ---
 
+## Introduction
+
+![Introduction](https://aimed-uab.github.io/SEAS/docs/images/demo/Introduction.png){: .border-1}
+
+
 ## Data Importation.
 
 SEAS require two data inputs from the user:
