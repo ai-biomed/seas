@@ -8,13 +8,19 @@ Statistical Enrichment Analysis of Samples (SEAS): a general-purpose tool to ann
 
 ---
 
-### R version used: 3.6.3
+#### Developement Details
 
-### Steps to run on your local server.
+R version used: 3.6.3
+
+---
+
+#### Steps to run on your local server.
 1. Download the source code.
 2. Open in R studio.
 3. Install packages mentioned in global.R
 4. Click on Run.
 
-### Docker Image with pre-installed packages will be available here soon.
+---
+
+#### Docker Image with pre-installed packages will be available here soon.
  
