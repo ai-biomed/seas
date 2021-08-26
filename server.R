@@ -179,7 +179,7 @@ function(input,output,session){
                      choices = c("All",colChoiceNumericName2())  ,
                      multiple = TRUE
          ),
-         HTML("Carefully select the clinotypes to calculate embedding.<br>Select 'All' to use all clinotypes.<br>View the results in embedding tab below.<br>Make sure to pre-remove/fill missing values in your dataset as rows with missing values will be dropped.")
+         HTML("Carefully select the clinotypes to calculate embedding.<br>Select 'All' to use all clinotypes.<br>View the results in embedding tab below.<br>Only Numerical Columns are used for SEAS embedding.")
          #              ),
     )
     )
@@ -204,19 +204,23 @@ function(input,output,session){
     if(clinotypesNum == 'All'){
       clinotypesNum <- colChoiceNumericName2()
     }
+    data <- dat[,clinotypesNum]
+    for(i in 1:ncol(data)){
+      data[is.na(data[,i]), i] <- mean(data[,i], na.rm = TRUE)
+    }
     #clinotypesNum <- colChoiceNumericName()
    # Labels <- dat[,label]
     # dat <- dat[ , apply(dat, 2, function(x) !any(is.na(x)))]
-    dat <-  dat  %>% drop_na(clinotypesNum)
+   # dat <-  dat  %>% drop_na(clinotypesNum)
     if(method == 'tsne'){
-    tsne <- Rtsne(dat[,clinotypesNum], dims = 2, perplexity=30, 
+    tsne <- Rtsne(data, dims = 2, perplexity=30, 
                   verbose=TRUE, max_iter = 500, check_duplicates = FALSE)
     print("tsne calculated")
     dat2 <- data.frame("Sample_ID" = dat[,1],"x" = tsne$Y[,1], "y"= tsne$Y[,2])
     return(dat2)
     }
     else{
-      umapRes <- umap(dat[,clinotypesNum])
+      umapRes <- umap(data)
       print("UMAP calculated")
       dat2 <- data.frame("Sample_ID" = dat[,1],
                          "x" = umapRes$layout[,1], 
