@@ -176,22 +176,34 @@ function(input,output,session){
     column(12,
          selectInput("embeddCal",
                      label = "Clinotype for SEAS Embedding",
-                     choices = colChoiceNumericName2(),
+                     choices = c("All",colChoiceNumericName2())  ,
                      multiple = TRUE
          ),
-         HTML("Carefully select the clinotypes to calculate embedding.<br>View the results in embedding tab below.<br>Make sure to pre-remove/fill missing values in your dataset.")
+         HTML("Carefully select the clinotypes to calculate embedding.<br>Select 'All' to use all clinotypes.<br>View the results in embedding tab below.<br>Make sure to pre-remove/fill missing values in your dataset as rows with missing values will be dropped.")
          #              ),
     )
     )
   })
   
-  embeddResult <- eventReactive(input$embeddCal,{
+  testreqem <- reactive({
+    paste(
+      
+      input$embeddM,
+      input$embeddCal
+    )
+  })
+  
+  embeddResult <- eventReactive(input$loadfiles,{
     req(input$embeddCal)
     print("Entered")
     dat <- read.csv(input$file3$datapath, header = input$fheader3)
     method <- input$embeddM
     print(method)
     clinotypesNum <- input$embeddCal
+    
+    if(clinotypesNum == 'All'){
+      clinotypesNum <- colChoiceNumericName2()
+    }
     #clinotypesNum <- colChoiceNumericName()
    # Labels <- dat[,label]
     # dat <- dat[ , apply(dat, 2, function(x) !any(is.na(x)))]
@@ -405,6 +417,8 @@ output$sampleSelectPlot0 <- renderPlotly({
   dat2 <- dfmain()
   NumericCols <- colChoiceNumericName()
   cm <- input$colorMode
+  qs <- dat[,1]
+  dat2 <- dat2[qs,]
   if(cm %in% NumericCols){
     dat2[,cm] <- cut2(dat2[,cm], g = 4)
   }
@@ -471,6 +485,8 @@ output$brushplotly <- renderPrint({
     dat2 <- dfmain()
     NumericCols <- colChoiceNumericName()
     cm <- input$colorMode
+    qs <- dat[,1]
+    dat2 <- dat2[qs,]
     if(cm %in% NumericCols){
       dat2[,cm] <- cut2(dat2[,cm], g = 4)
     }
