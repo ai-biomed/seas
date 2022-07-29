@@ -21,7 +21,7 @@ nav_order: 3
 
 ## Introduction
 
-![Introduction](https://aimed-uab.github.io/SEAS/docs/images/demo/Introduction.png){: .border-1}
+![Introduction](https://aimed-lab.github.io/SEAS/docs/images/demo/Introduction.png){: .border-1}
 
 
 ## Data Importation.
@@ -35,15 +35,15 @@ Accepted File Format: “.csv”
 
 ### Import Mode 1:
 
-![Import Mode 1](https://aimed-uab.github.io/SEAS/docs/images/demo/ImportMode1.png)
+![Import Mode 1](https://aimed-lab.github.io/SEAS/docs/images/demo/ImportMode1.png)
 
 ### Import Mode 2:
 
-![Import Mode 2](https://aimed-uab.github.io/SEAS/docs/images/demo/ImportMode2.png)
+![Import Mode 2](https://aimed-lab.github.io/SEAS/docs/images/demo/ImportMode2.png)
 
 ### For demo of SEAS:
 
-![Import Mode 3 demo](https://aimed-uab.github.io/SEAS/docs/images/demo/ImportMode3_demo.png)
+![Import Mode 3 demo](https://aimed-lab.github.io/SEAS/docs/images/demo/ImportMode3_demo.png)
 
 ---
 
@@ -53,9 +53,9 @@ Upon uploading of dataset, SEAS allows user to visualize the clinotypic (patient
 SEAS automatically identifies the data type of each clinotype in dataset and places them in respective suitable plots. 
 Linear Model Prediction is also added inside the scatter plot to visualize correlation between two clinotypes.
 
-![Data Exploration](https://aimed-uab.github.io/SEAS/docs/images/demo/DataExplore1.png)
+![Data Exploration](https://aimed-lab.github.io/SEAS/docs/images/demo/DataExplore1.png)
 
-![Data Exploration](https://aimed-uab.github.io/SEAS/docs/images/demo/DataExplore2.png)
+![Data Exploration](https://aimed-lab.github.io/SEAS/docs/images/demo/DataExplore2.png)
 
 ---
 
@@ -66,18 +66,18 @@ SEAS consist of three different methods for cohort selection from the embedding 
 ###	Neighborhood Selection Method.
 The method allows user to select a patient of interest from the dropdown and then select a neighborhood (closely located) using a dynamic radius input. This method is useful ___”.
 
-![Cohort Selection Mode 1](https://aimed-uab.github.io/SEAS/docs/images/demo/SelectionMode1.png)
+![Cohort Selection Mode 1](https://aimed-lab.github.io/SEAS/docs/images/demo/SelectionMode1.png)
 
 
 ###	Lasso + Box Selection Method. 
 The method allows user to either free hand or box select multiple clusters of patients/samples from the embedding plot. 
 
-![Cohort Selection Mode 2](https://aimed-uab.github.io/SEAS/docs/images/demo/SelectionMode2.png)
+![Cohort Selection Mode 2](https://aimed-lab.github.io/SEAS/docs/images/demo/SelectionMode2.png)
 
 ###	Custom Selection Method.
 The method allows user to input or provide custom list of Patient Identifiers to select in the embedding plot. This method is useful when the user selects a cohort with prior knowledge either from clinical or genomic profiles of patients. 
 
-![Cohort Selection Mode 3](https://aimed-uab.github.io/SEAS/docs/images/demo/SelectionMode3.png)
+![Cohort Selection Mode 3](https://aimed-lab.github.io/SEAS/docs/images/demo/SelectionMode3.png)
 
 ---
 
@@ -91,7 +91,7 @@ User can also set the P-value threshold for the test or leave on default to 0.05
 
 A table with detailed information of results is shown to the right. Calculated values are p-value and adjusted p-value using FDR cutoff of 0.05.
 
-![SEAS Analysis](https://aimed-uab.github.io/SEAS/docs/images/demo/Analysis.png)
+![SEAS Analysis](https://aimed-lab.github.io/SEAS/docs/images/demo/Analysis.png)
 
 ---
 
@@ -100,4 +100,4 @@ A table with detailed information of results is shown to the right. Calculated v
 Clinotypes which passed through the p-value threshold are shown here to further visualize the cohort and background relation using pie chart and boxplot. 
 Each row in this table is clickable and simultaneously updates the visualization plots of selected/clicked clinotype.
 
-![SEAS Result ](https://aimed-uab.github.io/SEAS/docs/images/demo/Results.png)
+![SEAS Result ](https://aimed-lab.github.io/SEAS/docs/images/demo/Results.png)
