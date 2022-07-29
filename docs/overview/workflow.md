@@ -8,7 +8,7 @@ nav_order: 2
 ## SEAS session workflow
 
 
-![Figure 1](https://aimed-uab.github.io/SEAS/docs/images/figure1.jpg)
+![Figure 1](https://aimed-lab.github.io/SEAS/docs/images/figure1.jpg)
 
 As showed in Figure 1, a SEAS session [https://aimed-lab.shinyapps.io/SEAS/](https://aimed-lab.shinyapps.io/SEAS/){:target="_blank"} includes three steps:
 - Uploading data: the user upload the clinical metadata for each sample (required) and/or the embedding for these samples (optional)
@@ -18,4 +18,4 @@ The purpose of embedding is to visualize the similarity among the samples. Each 
 
 The functional workflow is as follow:
 
-![SEAS Workflow](https://aimed-uab.github.io/SEAS/docs/images/SEAS_workflow.png)
+![SEAS Workflow](https://aimed-lab.github.io/SEAS/docs/images/SEAS_workflow.png)
