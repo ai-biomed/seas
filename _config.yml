@@ -16,7 +16,7 @@
 title: SEAS
 description: Statistical Enrichment Analysis of Samples
 baseurl: "/SEAS" # the subpath of your site, e.g. /blog
-url: "https://aimed-uab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://aimed-lab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 theme: just-the-docs
 
