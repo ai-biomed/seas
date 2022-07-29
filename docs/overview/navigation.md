@@ -47,7 +47,7 @@ SEAS support the following ways to select the subcohort:
 
 SEAS presents the enrichment result in a table, typically as follow:
 
-![Understanding Results](https://aimed-uab.github.io/SEAS/docs/images/understandingResults.png)
+![Understanding Results](https://aimed-lab.github.io/SEAS/docs/images/understandingResults.png)
 
 - The first column is the feature name. The second feature is the value. For example, the figure about shows ‘Discrete_days_to_death > 300‘ (outcome: the patient survive for more than 300 days)
 - '# in the population': the number of samples that have clinical outcomes defined by the previous two columns in the whole population.
